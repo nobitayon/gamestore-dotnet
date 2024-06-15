@@ -2,9 +2,10 @@
 
 namespace GameStore.Api.Dtos;
 
-public record class UpdateGameDto(
-    [Required][StringLength(50)] string Name, 
+public record class GameDetailsDto(
+    int Id, 
+    string Name, 
     int GenreId, 
-    [Range(1,100)] decimal Price,
+    decimal Price,
     DateOnly ReleaseDate
 );
